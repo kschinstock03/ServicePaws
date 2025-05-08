@@ -51,11 +51,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
             font-size: 1.8rem;
+        }
+
+        .nav-toggle {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #fff;
+            display: none;
+            cursor: pointer;
         }
 
         nav a {
@@ -84,6 +95,28 @@
 
         nav a:hover::after {
             width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            body.nav-open nav {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
         }
 
         main {
@@ -169,16 +202,6 @@
             font-size: 1.1rem;
         }
 
-        .why-choose a {
-            margin-top: 20px;
-            padding: 12px 24px;
-            background-color: var(--purple-light);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-        }
-
         .testimonial {
             background-color: var(--bg-dark);
             padding: 40px 20px;
@@ -221,16 +244,18 @@
 </head>
 
 <body>
+
     <div class="cursor-glow"></div>
 
     <header>
         <a href="index.html" style="text-decoration: none; color: inherit;">
             <h1><span style="color: #fdf7fb;">🐾</span> Service Paws</h1>
         </a>
+        <button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
         <nav>
             <a href="Backstory.html">Backstory</a>
-            <a href="Contact.html">Contact</a>
             <a href="Mission.html">Mission</a>
+            <a href="Contact.html">Contact</a>
         </nav>
     </header>
 

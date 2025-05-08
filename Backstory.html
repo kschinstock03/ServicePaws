@@ -139,23 +139,55 @@
                 font-size: 1.1rem;
             }
         }
+
+        .nav-toggle {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #fff;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            body.nav-open nav {
+                display: flex;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <div class="cursor-glow"></div>
-
     <header>
         <a href="index.html" style="text-decoration: none; color: inherit;">
             <h1><span style="color: var(--text-light);">🐾</span> Service Paws</h1>
         </a>
+        <button class="nav-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
         <nav>
             <a href="Backstory.html">Backstory</a>
             <a href="Mission.html">Mission</a>
             <a href="Contact.html">Contact</a>
         </nav>
     </header>
+
 
     <section>
         <div>
