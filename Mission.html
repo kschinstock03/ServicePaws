@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Mission | Service Paws</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --purple-dark: #3a2446;
+            --purple-light: #7a4f94;
+            --purple-accent: #a174b4;
+            --text-light: #fdf7fb;
+            --text-muted: #c2b9c9;
+            --bg-dark: #1e1a1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            position: relative;
+        }
+
+        /* Cursor glow */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, var(--purple-accent), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--purple-dark);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--purple-accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--purple-accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .pillars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pillar {
+            background-color: var(--purple-dark);
+            padding: 30px;
+            border-radius: 10px;
+            flex: 1 1 250px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .pillar p {
+            font-size: 1rem;
+            color: #d6cfe0;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--purple-accent);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta a:hover {
+            background-color: #b18fc8;
+        }
+
+        footer {
+            background-color: var(--purple-dark);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            .pillar {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mouse glow -->
+    <div class="cursor-glow"></div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1><span style="color: var(--text-light);">🐾</span> Service Paws</h1>
+        </a>
+        <nav>
+            <a href="Backstory.html">Backstory</a>
+            <a href="Mission.html">Mission</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Mission</h2>
+        <p>At Service Paws, we’re building more than a brand — we’re building awareness, accessibility, and advocacy for
+            the teams who navigate life together every day.</p>
+
+        <div class="pillars">
+            <div class="pillar">
+                <h3>Awareness</h3>
+                <p>We believe in educating the world about what service animals really do — breaking stigma and
+                    encouraging understanding.</p>
+            </div>
+            <div class="pillar">
+                <h3>Accessibility</h3>
+                <p>Our gear is created with function, comfort, and dignity in mind — because handlers deserve products
+                    that work as hard as their partners do.</p>
+            </div>
+            <div class="pillar">
+                <h3>Advocacy</h3>
+                <p>Service Paws is a voice for those who feel unseen. We are here to support, listen, and represent a
+                    community that deserves more.</p>
+            </div>
+        </div>
+
+        <p>"We do this for the teams who never quit — even when the world doesn’t understand. For the silent strength.
+            For the healing presence. For the bond no one else can see."</p>
+
+        <div class="cta">
+            <a href="Contact.html">Reach Out to Us</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Service Paws. All rights reserved.</p>
+    </footer>
+
+    <!-- Cursor movement -->
+    <script>
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.top = `${e.clientY}px`;
+            glow.style.left = `${e.clientX}px`;
+        });
+    </script>
+</body>
+
+</html>

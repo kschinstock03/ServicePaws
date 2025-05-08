@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Service Paws</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --purple-dark: #3a2446;
+            --purple-light: #7a4f94;
+            --purple-accent: #a174b4;
+            --text-light: #fdf7fb;
+            --text-muted: #c2b9c9;
+            --bg-dark: #1e1a1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, var(--purple-accent), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        header {
+            background-color: var(--purple-dark);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--purple-accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--purple-accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        form {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #2e2930;
+            color: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background-color: var(--purple-accent);
+            color: #fff;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #b18fc8;
+        }
+
+        footer {
+            background-color: var(--purple-dark);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1><span style="color: var(--text-light);">🐾</span> Service Paws</h1>
+        </a>
+        <nav>
+            <a href="Backstory.html">Backstory</a>
+            <a href="Mission.html">Mission</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Let’s Connect</h2>
+        <p>Have questions, custom requests, or just want to chat? I’d love to hear from you.</p>
+
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Service Paws. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.top = `${e.clientY}px`;
+            glow.style.left = `${e.clientX}px`;
+        });
+    </script>
+
+</body>
+
+</html>

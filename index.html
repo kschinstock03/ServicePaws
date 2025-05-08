@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Paws | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-dark: #3a2446;
+            --purple-light: #7a4f94;
+            --purple-accent: #a174b4;
+            --text-light: #fdf7fb;
+            --bg-dark: #1e1a1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-dark);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, var(--purple-accent), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        header {
+            background-color: var(--purple-dark);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--purple-accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--purple-accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .hero {
+            background-color: #7a4f94;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: var(--bg-dark);
+        }
+
+        .about img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .about-text {
+            max-width: 500px;
+            padding: 20px;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .about-text a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--purple-accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-text a:hover {
+            background-color: #b18fc8;
+        }
+
+        .section-title {
+            text-align: center;
+            padding: 40px 20px 20px;
+            font-size: 2rem;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .why-choose {
+            background-color: var(--bg-dark);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .why-choose p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            font-size: 1.1rem;
+        }
+
+        .why-choose a {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--purple-light);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .testimonial {
+            background-color: var(--bg-dark);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonial blockquote {
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .testimonial cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .awareness {
+            background-color: var(--bg-dark);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .awareness p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: var(--purple-dark);
+            padding: 20px;
+            text-align: center;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1><span style="color: #fdf7fb;">🐾</span> Service Paws</h1>
+        </a>
+        <nav>
+            <a href="Backstory.html">Backstory</a>
+            <a href="Contact.html">Contact</a>
+            <a href="Mission.html">Mission</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Empowering Service Dogs with Style and Support</h2>
+            <p>Providing high-quality, custom gear that honors the work of every service animal.</p>
+        </section>
+
+        <section class="about">
+            <img src="images/nyla-photo.jpg" alt="Photo of Nyla and Handler" />
+            <div class="about-text">
+                <p>At Service Paws, our mission is personal. Inspired by the bond between handler and service dog, we
+                    set out to create gear that’s as purposeful as it is stylish. With every product and design choice,
+                    we put accessibility, functionality, and love at the forefront. Because service dogs do
+                    life-changing work — and they deserve to look and feel their best doing it.</p>
+                <a href="Backstory.html">Read Our Backstory</a>
+            </div>
+        </section>
+
+        <section class="why-choose">
+            <h2 class="section-title">Why Choose Service Paws?</h2>
+            <p>We combine thoughtful design, functionality, and love in every piece of gear we create. Our goal is to
+                enhance the lives of service dogs and their handlers through personalized, accessible products that make
+                a real difference — because we believe every working dog deserves gear that’s as dependable as they are.
+            </p>
+        </section>
+
+        <section class="testimonial">
+            <h2 class="section-title">Why Service Paws Matters</h2>
+            <blockquote>“Service Paws isn’t just a brand — it’s a voice for people like me. As a handler, I’ve often
+                felt invisible. But this platform reminds me I’m not alone. It represents our bond, our struggles, and
+                our strength.”</blockquote>
+            <cite>– A Fellow Handler</cite>
+        </section>
+
+        <section class="awareness">
+            <h2 class="section-title">Support and Awareness</h2>
+            <p>Service dogs are more than companions — they’re life-changing partners. At Service Paws, we are
+                committed to raising awareness about the vital role service animals play in the lives of those who
+                depend on them. Whether it’s helping with mobility, mental health, or medical alert, these incredible
+                dogs deserve our support, respect, and recognition.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Service Paws. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.top = `${e.clientY}px`;
+            glow.style.left = `${e.clientX}px`;
+        });
+    </script>
+</body>
+
+</html>

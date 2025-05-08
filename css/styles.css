@@ -1,0 +1,102 @@
+/*------ My Styles ------*/
+
+body {}
+
+@media only all and (max-width: 768px) {}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+footer p {
+    color: white;
+}
+
+/* style.css */
+
+body {
+    font-family: 'Cantora One', sans-serif;
+    background-color: #fdfaff;
+    color: #333;
+}
+
+header {
+    background-color: #4B2E5A;
+    /* Deep purple */
+}
+
+h1,
+h2 {
+    color: #4B2E5A;
+}
+
+section {
+    background-color: #f7f2fa;
+    /* Soft lavender */
+}
+
+footer {
+    background-color: #4B2E5A;
+}
+
+footer p {
+    color: #fff;
+}
+
+body.backstory-page {
+    background-color: #EAD6E5;
+    /* soft lavender pink */
+    color: #2D2D2D;
+    font-family: 'Cantora One', sans-serif;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #5C5470;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subheading {
+    font-size: 1.25rem;
+    color: #7D6C9C;
+    margin-bottom: 2rem;
+}
+
+img.main-photo {
+    max-width: 400px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.story-text {
+    max-width: 750px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 0 1rem;
+    color: #333;
+}
+
+footer .cta {
+    font-size: 1.2rem;
+    color: #5C5470;
+    margin-bottom: 0.75rem;
+}
+
+.shop-btn {
+    background-color: #7D6C9C;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.shop-btn:hover {
+    background-color: #5C5470;
+}

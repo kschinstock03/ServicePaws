@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backstory | Service Paws</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --purple-dark: #3a2446;
+            --purple-light: #7a4f94;
+            --purple-accent: #a174b4;
+            --text-light: #fdf7fb;
+            --text-muted: #c2b9c9;
+            --bg-dark: #1e1a1f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, var(--purple-accent), transparent 60%);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        header {
+            background-color: var(--purple-dark);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--purple-accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--purple-accent);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--bg-dark);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--purple-dark);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            color: var(--text-muted);
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: var(--purple-dark);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1><span style="color: var(--text-light);">🐾</span> Service Paws</h1>
+        </a>
+        <nav>
+            <a href="Backstory.html">Backstory</a>
+            <a href="Mission.html">Mission</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <div>
+            <h1>The Story Behind Service Paws</h1>
+            <p>Service Paws began with Nyla — my service dog, my lifeline, and the reason I’m still standing. She came
+                into my life when everything felt too heavy, too chaotic, too much. She grounded me in the middle of
+                storms.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h1>It Started with Nyla</h1>
+            <p>Through the hardest moments — panic attacks, breakdowns, silence — she never left my side. She was my
+                voice when I didn’t have one. My strength when I was falling apart. She deserved more than standard gear
+                — she deserved recognition, respect, and love.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h1>More Than Gear</h1>
+            <p>Service Paws isn’t just a brand — it’s awareness. It’s about showing the world what service animals
+                really do, and giving their handlers a place to feel seen and supported. The gear came later — after the
+                mission was clear.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h1>A New Kind of Brand</h1>
+            <p>I created Service Paws as a place where people can come not just to shop, but to connect. Whether you’re
+                here for a collar or a conversation, this brand was built for you — and the animal who gets you through
+                each day.</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h1>This Is Service Paws</h1>
+            <p>This is awareness. This is advocacy. This is love. Nyla saved my life — and now I’m building something
+                that gives back to every team like us. Service Paws is for you, your partner, and the bond you fight for
+                every day.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Service Paws. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Cursor glow
+        const glow = document.querySelector(".cursor-glow");
+        document.addEventListener("mousemove", (e) => {
+            glow.style.top = `${e.clientY}px`;
+            glow.style.left = `${e.clientX}px`;
+        });
+
+        // Scroll animation
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>
